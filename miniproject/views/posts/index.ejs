@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog de Dave El Pato</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1>Todos los Posts:</h1>
+<table>
+    <% for (let post of posts) { %>
+        <tr>
+            <td>
+                <%= post.id %>
+            </td>
+            <td>
+                <%= post.title %>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>" id="opcion">Mostrar Post</a>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>/edit" id="opcion">Editar</a>
+            </td>
+            <td>
+                <a href="/posts/<%= post.id %>?_method=DELETE" id="opcion"
+                   onClick="return confirm('¿Está seguro de querer borrar el post: <%= post.id %>?');"
+                   >Borrar</a>
+            </td>
+        </tr>
+    <% } %>
+</table>
+
+<a href="/posts/new" id="opcion">Crear nuevo post</a>
+</body>
+</html>

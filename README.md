@@ -5,6 +5,6 @@ Consiste en crear un blog donde se puedan subir posts, usando la librería expre
 
 Para inciar la práctica, abra una terminal en la ubicación de la carpeta miniproject y haga el comando:
 
-> > npm run super
+> '>' npm run super
 
 Luego conéctese a localhost:3000 para ver e interactuar con el blog.
